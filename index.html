@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas 7.1 - SMPI Alwahab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Warna Utama */
+        :root {
+            --biru-tua: #0A3D62;
+            --biru-muda: #3C6382;
+            --biru-langit: #60A3BC;
+            --putih-murni: #FFFFFF;
+            --putih-abu: #F8FAFC;
+        }
+
+        body {
+            background-color: var(--putih-abu);
+            color: var(--biru-tua);
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: var(--biru-tua);
+            color: var(--putih-murni);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav {
+            display: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--putih-murni);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--biru-langit);
+        }
+
+        .menu-toggle {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, var(--biru-muda), var(--biru-langit));
+            color: var(--putih-murni);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Konten Utama */
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--putih-murni);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--biru-tua);
+        }
+
+        .card h2 {
+            color: var(--biru-tua);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            line-height: 1.8;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        /* Profil Kelas */
+        .profil-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .profil-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--putih-abu);
+        }
+
+        .profil-item span {
+            font-weight: bold;
+            color: var(--biru-muda);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--biru-tua);
+            color: var(--putih-murni);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsif untuk Desktop */
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+            .menu-toggle {
+                display: none;
+            }
+            .main-content {
+                grid-template-columns: 2fr 1fr;
+            }
+            .profil-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>📚</span> Kelas 7.1
+            </div>
+            <nav id="navbar">
+                <a href="#profil">Profil</a>
+                <a href="#jadwal">Jadwal</a>
+                <a href="#berita">Berita</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>SMPI Alwahab - Kelas 7.1</h1>
+        <p>Bersama kita bangun generasi cerdas, berakhlak mulia, dan siap menghadapi masa depan!</p>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="main-content">
+        <!-- Profil Kelas -->
+        <section class="card" id="profil">
+            <h2>Profil Kelas</h2>
+            <div class="profil-grid">
+                <div class="profil-item">
+                    <span>Nama Kelas:</span> Kelas 7.1
+                </div>
+                <div class="profil-item">
+                    <span>Wali Kelas:</span> Bu Helmi Handayani, S.Pd
+                </div>
+                <div class="profil-item">
+                    <span>Jumlah Siswa:</span> 47 Siswa (24 Laki-laki, 23 Perempuan)
+                </div>
+                <div class="profil-item">
+                </div>
+            </div>
+            <p style="margin-top: 1rem;">Entah Anis atau Ganjar tapi senyummu melahirkan mesin yang ga wajar</p>
+        </section>
+
+        <!-- Jadwal Pelajaran -->
+        <section class="card" id="jadwal">
+            <h2>Jadwal Pelajaran</h2>
+            <ul>
+                <li><strong>Senin:</strong> IPA, IPS, Bahasa Indonesia</li>
+                <li><strong>Selasa:</strong> PPKN, IPA, IPS, Bahasa Indonesia</li>
+                <li><strong>Rabu:</strong> Seni dan Prakarya, Informatika, BTQ, Matematika</li>
+                <li><strong>Kamis:</strong> PAI, Matematika, Bahasa Inggris</li>
+                <li><strong>Jumat:</strong> PBP, PJOK</li>
+            </ul>
+        </section>
+
+        <!-- Berita Terbaru -->
+        <section class="card" id="berita">
+            <h2>Berita Kelas</h2>
+            <h3 style="color: var(--biru-muda); margin-bottom: 0.5rem;">Fakta Kelas 7.1</h3>
+            <p>Kelompok siswa kelas 7.1 adalah kelas paling berisik kayaknya!</p>
+        </section>
+
+        <!-- Galeri Foto -->
+        <section class="card" id="galeri"
+            <h2>Galeri Kelas</h2>
+            <img src="https://via.placeholder.com/600x300.png?text=Foto+Kelas+7.1" alt="Foto Kelas 7.1">
+            <img src="https://via.placeholder.com/600x300.png?text=Foto+Kelas+7.1" alt="Foto Kelas 7.1">
+        </section>
+
+        <!-- Kontak -->
+        <section class="card" id="kontak">
+            <h2>Kontak</h2>
+            <ul>
+                <li><strong>Wali Kelas:</strong> 0812-XXX-XXXX (tidak menampilkan nomor lengkap untuk privasi)</li>
+                <li><strong>Email Kelas:</strong> tamaganteng123@gmail.com🗿</li>
+                <li><strong>Alamat Sekolah:</strong> Jl. Pendidikan No. 123, Cengkareng Timur,Jakarta Barat</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tama - Semua Hak Dilindungi</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menu mobile
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+                navbar.style.flexDirection = 'column';
+                navbar.style.position = 'absolute';
+                top = '65px';
+                right = '2rem';
+                background-color: var(--biru-tua);
+                padding = '1rem';
+                border-radius = '5px';
+            }
+        }
+
+        // Scroll halus untuk tautan navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Tutup menu mobile jika terbuka
+                const navbar = document.getElementById('navbar');
+                if (window.innerWidth < 768) {
+                    navbar.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
